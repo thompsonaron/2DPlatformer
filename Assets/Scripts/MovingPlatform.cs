@@ -9,8 +9,6 @@ public class MovingPlatform : MonoBehaviour
     private int currentPoint;
 
     public Transform platform;
-
-
     // Update is called once per frame
     void Update()
     {
@@ -26,23 +24,4 @@ public class MovingPlatform : MonoBehaviour
             }
         }
     }
-
-
-    //// Keeps plater attach to moving platform -> Bugged TODO
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("WHOT");
-    //        other.transform.parent = this.transform;
-    //    }
-    //}
-
-    //private void OnCollisionExit2D(Collision2D other)
-    //{
-    //    if (other.gameObject.tag == "Player")
-    //    {
-    //        other.transform.parent = null;
-    //    }
-    //}
 }

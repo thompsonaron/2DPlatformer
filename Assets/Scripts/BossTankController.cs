@@ -109,8 +109,7 @@ public class BossTankController : MonoBehaviour
                 if (mineCounter<= 0)
                 {
                     mineCounter = timeBetweenMines;
-                    Instantiate(mine, minePoint.position, minePoint.rotation);
-                    
+                    Instantiate(mine, minePoint.position, minePoint.rotation);              
                 }
                 break;
             
@@ -123,9 +122,6 @@ public class BossTankController : MonoBehaviour
     //        {
     //            TakeHit();
     //        }
-
-
-
     //#endif
 
     public void TakeHit()

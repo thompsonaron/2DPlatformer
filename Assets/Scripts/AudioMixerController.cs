@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class AudioMixerController : MonoBehaviour
 {
     public AudioMixer mixer;
-    // Start is called before the first frame update
+
     [SerializeField]
     private GameObject settingsPanel;
 
@@ -22,7 +22,6 @@ public class AudioMixerController : MonoBehaviour
 
     protected  void Awake()
     {
-       // base.Awake();
         _dataManager = Object.FindObjectOfType<DataManager>();
     }
 
@@ -30,16 +29,6 @@ public class AudioMixerController : MonoBehaviour
     {
         LoadData();
     }
-
-    //public void OnMasterVolumeChanged(float volume)
-    //{
-    //    //if (_dataManager != null)
-    //    //{
-    //    //    _dataManager.MasterVolume = volume;
-            
-    //    //}
-        
-    //}
 
     public void OnSFXVolumeChanged(float volume)
     {
@@ -67,13 +56,11 @@ public class AudioMixerController : MonoBehaviour
 
     public  void OnBackPressed()
     {
-        //base.OnBackPressed();
         if (_dataManager != null)
         {
             _dataManager.Save();
         }
         settingsPanel.SetActive(false);
-
     }
 
     public void LoadData()
@@ -83,7 +70,7 @@ public class AudioMixerController : MonoBehaviour
             return;
         }
         _dataManager.Load();
-      //  _masterVolumeSlider.value = _dataManager.MasterVolume;
+
         _sfxVolumeSlider.value = _dataManager.SfxVolume;
         _musicVolumeSlider.value = _dataManager.MusicVolume;
     }

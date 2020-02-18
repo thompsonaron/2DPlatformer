@@ -21,8 +21,6 @@ public class CheckPointController : MonoBehaviour
         spawnPoint = PlayerController.instance.transform.position;
     }
 
-
-
     public void DeactivateCheckpoints()
     {
         for (int i = 0; i < checkpoints.Length; i++)

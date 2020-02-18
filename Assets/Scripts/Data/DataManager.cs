@@ -9,13 +9,6 @@ namespace LevelManagement.Data
         private SaveData _saveData;
         private JsonSaver _jsonSaver;
 
-        // public properties to set and get values from the SaveData object
-        //public float MasterVolume
-        //{
-        //    get { return _saveData.masterVolume; }
-        //    set { _saveData.masterVolume = value; }
-        //}
-
         public float SfxVolume
         {
             get { return _saveData.sfxVolume; }
@@ -28,11 +21,6 @@ namespace LevelManagement.Data
             set { _saveData.musicVolume = value; }
         }
 
-        //public string PlayerName
-        //{
-        //    get { return _saveData.playerName; }
-        //    set { _saveData.playerName = value; }
-        //}
 
         // initialize SaveData and JsonSaver objects
         private void Awake()

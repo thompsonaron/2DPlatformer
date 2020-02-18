@@ -7,8 +7,6 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
-    
-
     public float waitToRespawn;
 
     public int gemsCollected;
@@ -28,8 +26,7 @@ public class LevelManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        StartCoroutine(RespawnCoroutine());
-        
+        StartCoroutine(RespawnCoroutine());        
     }
 
     private IEnumerator RespawnCoroutine()

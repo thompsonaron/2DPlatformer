@@ -21,10 +21,7 @@ public class GemTracker : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-        }
-
-
-        
+        }  
     }
 
     // Start is called before the first frame update

@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        // Debug.Log("WTF");
+
         if (timeBtwAttack <= 0)
         {
             if (Input.GetKeyDown(KeyCode.C))
@@ -38,14 +38,11 @@ public class PlayerAttack : MonoBehaviour
                         {
                             enemiesToDamage[i].GetComponent<FlyingEnemyController>().TakeDamage(damage);
                         }
-
-                    }
-                    
+                    }                
                 }
                 timeBtwAttack = startTimeBtwAttack;
             }
-            
-            
+       
         }
         else
         {
